@@ -28,7 +28,7 @@ import (
 // функция проверяет первые два параметра на нужный тип
 func readTask() (interface{}, interface{}, interface{}) {
 
-	return true, 4.7, "-"
+	return 6.0, 4.7, "-"
 
 }
 
