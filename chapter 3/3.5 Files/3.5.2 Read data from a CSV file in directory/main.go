@@ -15,7 +15,6 @@ func ZipReader(path string, err error) {
 	if err != nil {
 		log.Fatalln(err)
 	}
-
 	body, err := io.ReadAll(resp.Body) //read body answer
 	if err != nil {
 		log.Fatalln(err)
@@ -23,10 +22,9 @@ func ZipReader(path string, err error) {
 	defer func(Body io.ReadCloser) {
 		err := Body.Close()
 		if err != nil {
-
+			panic(err)
 		}
 	}(resp.Body)
-
 	reader, err := zip.NewReader(bytes.NewReader(body), int64(len(body)))
 	if err != nil {
 		fmt.Println("Ошибка", err)
@@ -40,7 +38,7 @@ func ZipReader(path string, err error) {
 			defer func(el io.ReadCloser) {
 				err := el.Close()
 				if err != nil {
-
+					panic(err)
 				}
 			}(el)
 			r1 := csv.NewReader(el)    //create reader of csv data
