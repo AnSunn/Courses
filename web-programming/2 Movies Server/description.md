@@ -1,7 +1,7 @@
 Create Movies server:
-* Get all request export all movies data
+* Get all request exports all movies data
 
-* Get by Id one export movie with requested id
+* Get by Id one exports movie with requested id
 
 * Create request creates the movie
 
