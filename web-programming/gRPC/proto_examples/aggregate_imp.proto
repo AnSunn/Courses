@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "proto_examples/City.proto";
+import "proto_examples/Building.proto";
+import "proto_examples/Street.proto";
+
+message agg_data {
+  City.City city = 1;
+  City.Building building = 2;
+  street.Street street = 3;
+}
