@@ -1,0 +1,27 @@
+/*
+    DayOfWeek (example Monday) using Enum, and keeping the 0 as “undefined” day*/
+
+syntax = "proto3";
+
+message City{
+  string Name = 1;
+  string Zip_code = 2;
+  string Country_name = 3;
+}
+
+message Street {
+string Street_name = 1;
+string City = 2;
+}
+
+message Building {
+  string Building_name = 1;
+  string Building_number = 2;
+  string Street = 3;
+}
+
+message Data {
+  City city = 1;
+  Street street = 2;
+ Building building = 3;
+}
